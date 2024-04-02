@@ -1,0 +1,95 @@
+html {
+    font-size: 12px;
+    height: 100vh;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+body {
+    color: whitesmoke;
+    letter-spacing: 0.1rem;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: black;
+        padding: 1rem 2rem;
+        min-height: 5rem;
+        min-width: 5rem;
+    }
+    .general-container {
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            background: whitesmoke;
+            color: black;
+            font-weight: 700;
+            border-radius: 0.2rem;
+            padding: 2rem;
+            margin: 0.5rem;
+            box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            user-select: none;
+        }
+        .btn:hover {
+            background: rgb(150, 150, 150);
+            color: whitesmoke;
+        }
+        .random-btns-container,
+        .general-btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            min-height: 5rem;
+        }
+        .general-btn-container {
+            #btn_green:active,
+            #btn_blue:active,
+            #btn_yellow:active,
+            #btn_purple:active,
+            #btn_red:active {
+                margin-top: 0.3rem;
+            }
+        }
+
+        .random-btns-container {
+            position: absolute;
+            bottom: 3rem;
+            #btn_random:active,
+            #btn_hex:active,
+            #btn_rgb:active {
+                margin-top: 0.3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    html {
+        font-size: 11px;
+    }
+}
+@media (max-width: 720px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media (max-width: 520px) {
+    html {
+        font-size: 9px;
+    }
+}
